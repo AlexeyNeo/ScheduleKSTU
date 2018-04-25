@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Course] (
+    [Id]     TINYINT IDENTITY (1, 1) NOT NULL,
+    [Number] TINYINT NOT NULL,
+    CONSTRAINT [PK_Course] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
