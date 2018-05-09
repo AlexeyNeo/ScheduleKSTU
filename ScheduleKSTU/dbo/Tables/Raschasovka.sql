@@ -8,7 +8,6 @@
     [GroupId]              BIGINT   NOT NULL,
     [DepartmentId]         SMALLINT NOT NULL,
     [SemesterId]           TINYINT  NOT NULL,
-    [YearId]               TINYINT  NOT NULL,
     [SubjectId]            BIGINT   NOT NULL,
     [SubjectTypeId]        TINYINT  NOT NULL,
     CONSTRAINT [PK_Raschasovka] PRIMARY KEY CLUSTERED ([Id] ASC),
@@ -19,9 +18,10 @@
     CONSTRAINT [FK_Raschasovka_Semesters] FOREIGN KEY ([SemesterId]) REFERENCES [dbo].[Semesters] ([Id]),
     CONSTRAINT [FK_Raschasovka_Subject] FOREIGN KEY ([SubjectId]) REFERENCES [dbo].[Subject] ([Id]),
     CONSTRAINT [FK_Raschasovka_SubjectType] FOREIGN KEY ([SubjectTypeId]) REFERENCES [dbo].[SubjectType] ([Id]),
-    CONSTRAINT [FK_Raschasovka_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]) ON UPDATE CASCADE,
-    CONSTRAINT [FK_Raschasovka_Year] FOREIGN KEY ([YearId]) REFERENCES [dbo].[Years] ([Id])
+    CONSTRAINT [FK_Raschasovka_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]) ON UPDATE CASCADE
 );
+
+
 
 
 
