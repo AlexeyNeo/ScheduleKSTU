@@ -64,7 +64,6 @@
     <Build Include="dbo\Tables\Week.sql" />
     <Build Include="dbo\Tables\TeacherPersonalTime.sql" />
     <Build Include="dbo\Tables\Teacher.sql" />
-    <Build Include="dbo\Tables\SubjectWithType.sql" />
     <Build Include="dbo\Tables\SubjectType.sql" />
     <Build Include="dbo\Tables\Subject.sql" />
     <Build Include="dbo\Tables\Schedule.sql" />
@@ -83,5 +82,6 @@
     <Build Include="dbo\Tables\Semesters.sql" />
     <Build Include="dbo\Tables\RaschasovkaWeeks.sql" />
     <Build Include="dbo\Tables\TeacherDepartment.sql" />
+    <Build Include="dbo\Tables\SubjectDepartment.sql" />
   </ItemGroup>
 </Project>
