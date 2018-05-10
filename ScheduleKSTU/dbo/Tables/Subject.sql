@@ -4,6 +4,3 @@
     [FullName] NVARCHAR (150) NOT NULL,
     CONSTRAINT [PK_Subject] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
-
-
-

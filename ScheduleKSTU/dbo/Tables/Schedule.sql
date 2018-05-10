@@ -22,6 +22,3 @@
     CONSTRAINT [FK_Schedule_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]),
     CONSTRAINT [FK_Schedule_Week] FOREIGN KEY ([WeekId]) REFERENCES [dbo].[Week] ([Id]) ON UPDATE CASCADE
 );
-
-
-
