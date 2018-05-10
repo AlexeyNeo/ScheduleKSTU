@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[ScheduleYears] (
+    [Id]            INT           IDENTITY (1, 1) NOT NULL,
+    [HourId]        TINYINT       NOT NULL,
+    [DayOfWeekId]   TINYINT       NOT NULL,
+    [GroupId]       BIGINT        NOT NULL,
+    [TeacherId]     INT           NOT NULL,
+    [AuditoriumId]  SMALLINT      NOT NULL,
+    [WeekId]        TINYINT       NOT NULL,
+    [LastChange]    SMALLDATETIME NULL,
+    [IsFinal]       BIT           NULL,
+    [SubjectId]     BIGINT        NOT NULL,
+    [SubjectTypeId] TINYINT       NOT NULL,
+    [SemesterId]    TINYINT       NOT NULL,
+    [YearId]        TINYINT       NOT NULL,
+    CONSTRAINT [PK_ScheduleYearsId] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_ScheduleYears_Auditorium] FOREIGN KEY ([AuditoriumId]) REFERENCES [dbo].[Auditorium] ([Id]),
+    CONSTRAINT [FK_ScheduleYears_DayOfWeek] FOREIGN KEY ([DayOfWeekId]) REFERENCES [dbo].[DayOfWeek] ([Id]) ON UPDATE CASCADE,
+    CONSTRAINT [FK_ScheduleYears_Group] FOREIGN KEY ([GroupId]) REFERENCES [dbo].[Group] ([Id]) ON UPDATE CASCADE,
+    CONSTRAINT [FK_ScheduleYears_Hour] FOREIGN KEY ([HourId]) REFERENCES [dbo].[Hour] ([Id]) ON UPDATE CASCADE,
+    CONSTRAINT [FK_ScheduleYears_SemesterId] FOREIGN KEY ([SemesterId]) REFERENCES [dbo].[Semesters] ([Id]),
+    CONSTRAINT [FK_ScheduleYears_Subject] FOREIGN KEY ([SubjectId]) REFERENCES [dbo].[Subject] ([Id]),
+    CONSTRAINT [FK_ScheduleYears_SubjectType] FOREIGN KEY ([SubjectTypeId]) REFERENCES [dbo].[SubjectType] ([Id]),
+    CONSTRAINT [FK_ScheduleYears_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]),
+    CONSTRAINT [FK_ScheduleYears_Week] FOREIGN KEY ([WeekId]) REFERENCES [dbo].[Week] ([Id]) ON UPDATE CASCADE,
+    CONSTRAINT [FK_ScheduleYears_Year] FOREIGN KEY ([YearId]) REFERENCES [dbo].[Years] ([Id])
+);
+
