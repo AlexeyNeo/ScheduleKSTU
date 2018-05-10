@@ -79,11 +79,12 @@
     <Build Include="dbo\Tables\AuditoriumType.sql" />
     <Build Include="dbo\Tables\Auditorium.sql" />
     <Build Include="dbo\Tables\Years.sql" />
-    <Build Include="dbo\Tables\Semesters.sql" />
-    <Build Include="dbo\Tables\RaschasovkaWeeks.sql" />
     <Build Include="dbo\Tables\TeacherDepartment.sql" />
     <Build Include="dbo\Tables\SubjectDepartment.sql" />
+    <Build Include="dbo\Tables\Semesters.sql" />
     <Build Include="dbo\Tables\ScheduleYears.sql" />
+    <Build Include="dbo\Tables\ScheduleRealization.sql" />
     <Build Include="dbo\Tables\RaschasovkaYears.sql" />
+    <Build Include="dbo\Tables\RaschasovkaWeeks.sql" />
   </ItemGroup>
 </Project>
