@@ -20,10 +20,3 @@
     CONSTRAINT [FK_Raschasovka_SubjectType] FOREIGN KEY ([SubjectTypeId]) REFERENCES [dbo].[SubjectType] ([Id]),
     CONSTRAINT [FK_Raschasovka_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]) ON UPDATE CASCADE
 );
-
-
-
-
-
-
-
