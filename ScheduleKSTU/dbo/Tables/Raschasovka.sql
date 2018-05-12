@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Raschasovka] (
     [Id]                   INT      IDENTITY (1, 1) NOT NULL,
-    [Potok]                INT      NOT NULL,
+    [Potok]                INT      NULL,
     [CourseId]             TINYINT  NOT NULL,
     [TeacherId]            INT      NOT NULL,
     [TotalHoursForSemestr] SMALLINT NOT NULL,
@@ -21,4 +21,6 @@
     CONSTRAINT [FK_Raschasovka_SubjectType] FOREIGN KEY ([SubjectTypeId]) REFERENCES [dbo].[SubjectType] ([Id]),
     CONSTRAINT [FK_Raschasovka_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]) ON UPDATE CASCADE
 );
+
+
 
