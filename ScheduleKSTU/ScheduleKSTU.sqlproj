@@ -87,5 +87,6 @@
     <Build Include="dbo\Tables\RaschasovkaYears.sql" />
     <Build Include="dbo\Tables\RaschasovkaWeeks.sql" />
     <Build Include="dbo\Tables\Criteria.sql" />
+    <Build Include="dbo\Tables\AuditoriumSubjectTypes.sql" />
   </ItemGroup>
 </Project>
