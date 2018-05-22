@@ -5,7 +5,6 @@
     [GroupId]       BIGINT        NOT NULL,
     [TeacherId]     INT           NOT NULL,
     [AuditoriumId]  SMALLINT      NOT NULL,
-    [WeekId]        TINYINT       NOT NULL,
     [LastChange]    SMALLDATETIME NULL,
     [IsFinal]       BIT           NULL,
     [SubjectId]     BIGINT        NOT NULL,
@@ -19,6 +18,7 @@
     CONSTRAINT [FK_Schedule_SemesterId] FOREIGN KEY ([SemesterId]) REFERENCES [dbo].[Semesters] ([Id]),
     CONSTRAINT [FK_Schedule_Subject] FOREIGN KEY ([SubjectId]) REFERENCES [dbo].[Subject] ([Id]),
     CONSTRAINT [FK_Schedule_SubjectType] FOREIGN KEY ([SubjectTypeId]) REFERENCES [dbo].[SubjectType] ([Id]),
-    CONSTRAINT [FK_Schedule_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]),
-    CONSTRAINT [FK_Schedule_Week] FOREIGN KEY ([WeekId]) REFERENCES [dbo].[Week] ([Id]) ON UPDATE CASCADE
+    CONSTRAINT [FK_Schedule_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id])
 );
+
+
