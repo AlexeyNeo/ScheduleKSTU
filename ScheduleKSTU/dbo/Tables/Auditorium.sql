@@ -4,7 +4,7 @@
     [Name]             NVARCHAR (100)    NOT NULL,
     [DepartmentId]     SMALLINT          NULL,
     [SeatingCapacity]  SMALLINT          NOT NULL,
-    [AuditoriumTypeId] TINYINT           NULL,
+    [AuditoriumTypeId] TINYINT           NOT NULL,
     [BuildingId]       TINYINT           NULL,
     [Location]         [sys].[geography] NULL,
     CONSTRAINT [PK_Auditorium] PRIMARY KEY CLUSTERED ([Id] ASC),
@@ -12,6 +12,8 @@
     CONSTRAINT [FK_Auditorium_Building] FOREIGN KEY ([BuildingId]) REFERENCES [dbo].[Building] ([Id]),
     CONSTRAINT [FK_Auditorium_Department] FOREIGN KEY ([DepartmentId]) REFERENCES [dbo].[Department] ([Id]) ON UPDATE CASCADE
 );
+
+
 
 
 

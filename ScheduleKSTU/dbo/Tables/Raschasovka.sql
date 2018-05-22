@@ -11,7 +11,7 @@
     [SubjectId]            BIGINT   NOT NULL,
     [SubjectTypeId]        TINYINT  NOT NULL,
     [NumberOfStudents]     TINYINT  NOT NULL,
-    [SubjectClassId]       TINYINT  NULL,
+    [SubjectClassId]       TINYINT  NOT NULL,
     CONSTRAINT [PK_Raschasovka] PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Raschasovka_Auditorium] FOREIGN KEY ([AuditoriumId]) REFERENCES [dbo].[Auditorium] ([Id]),
     CONSTRAINT [FK_Raschasovka_Course] FOREIGN KEY ([CourseId]) REFERENCES [dbo].[Course] ([Id]) ON UPDATE CASCADE,
@@ -23,6 +23,8 @@
     CONSTRAINT [FK_Raschasovka_SubjectType] FOREIGN KEY ([SubjectTypeId]) REFERENCES [dbo].[SubjectType] ([Id]),
     CONSTRAINT [FK_Raschasovka_Teacher] FOREIGN KEY ([TeacherId]) REFERENCES [dbo].[Teacher] ([Id]) ON UPDATE CASCADE
 );
+
+
 
 
 
